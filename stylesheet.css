@@ -1,0 +1,61 @@
+body{
+	background-color: #e1ca96;
+}
+.container {
+	display: grid;
+	grid-template-areas: "nav  nav nav"
+	"header  header  header"
+	"pagenav  pagenav  pagenav"
+	"title1  title1  title1"
+	"background  background  image1"
+	"title2  title2  title2"
+	"image2  how  how";
+	grid-auto-rows: minmax(10px, auto);
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 10px;
+	position: relative;
+}
+
+nav {
+	grid-area: nav;
+	background-color: blue;
+}
+
+header{
+	grid-area: header;
+	background-color: #434a42;
+	color: #aca885;
+	text-align: center;
+	font-family: Georgia;
+	font-weight: bold;
+}
+
+.pagenav {
+	grid-area: pagenav;
+}
+
+.title1 {
+	grid-area: title1;
+	background-color: #434a42;
+}
+
+.background{
+	grid-area: background;
+}
+
+.image1{
+	grid-area: image1;
+}
+
+.title2{
+	grid-area: title2;
+	background-color: #434a42;
+}
+
+.image2{
+	grid-area: image2;
+}
+
+.how{
+	grid-area: how;
+}

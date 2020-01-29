@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<title>WithCSS</title>
+</head>
+<body>
+<div class="container">
+	<nav>
+		<p> Testing <p>
+		<p> Testing 2 <p>
+	</nav>
+	<header>
+	    <h1>Problem Background</h1>
+	    <h4><em>Erosion rates on the Hawaiian Island.</em></h4>
+	</header>
+	<div class="pagenav">
+	    <ul>
+	  	  <li><a href="#why">What is the mass flux rate on the Hawaiian Islands</a></li>
+	  	  <li><a href="#how">How does it work?</a></li>
+	    </ul>
+	</div>
+	<div class="title1">
+		<h2>What is the mass flux rate on the Hawaiian Islands?</h2>
+	</div>
+	<div class="background">
+		<p>The Hawaiian Islands, known for its gorgeous beaches and beautiful hikes, are disappearing. But how fast are the islands being eroded? The big island is growing, but the others are only shrinking now. This app will give estimates on the flux of material out of Hawaii. This can be useful to researchers who want to know how much material is leaving. It also then provides an average rate to compare to modern rates from suspended load, solute and bed load.</p>
+	</div>
+	<div class="image1">
+		<img src=><img src="IMG_4559.JPG" width="400" height="300" alt="IMG 4559"/>
+		<figcaption>Waimea Canyon</figcaption>
+	</div>
+	<div class="title2">
+		<h2>How does it work?</h2>
+	</div>
+	<div class="how">
+         <p>The user needs to choose a region they are interested in and draw a polygon on to the map. They then need to create points along the ridges in their chosen area.</p>
+         <p>The app will take these points and extract the elevation data from a DEM. It will then interpolate these points to create a new surface. This new surface is the <q>pre-erosion</q> surface using the assumption that there has been none or very little erosion at the ridges.</p>
+        <p>Then it will calculate the volume of the chosen area with the original DEM and the new surface. It will then find the volume of material that has left the system. Then, with an inputted age of the rock and the density, it will calculate the mass flux in t/km<sup>2</sup>/yr.</p>
+	</div>
+	<div class="image2">
+        <img src="Oahu.jpeg" width="400" height="300" alt="Oahu">
+        <figcaption>Oahu</figcaption>
+	</div>
+</div>
+</body>		
+</html>
+
+
