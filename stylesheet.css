@@ -18,7 +18,7 @@ body{
 
 nav {
 	grid-area: nav;
-	background-color: blue;
+	background-color: #434a42;
 }
 
 header{
@@ -32,11 +32,18 @@ header{
 
 .pagenav {
 	grid-area: pagenav;
+	justify-self: center;
+	align-self: center;
+}
+.pagenav li {
+	display: inline-block;
 }
 
 .title1 {
 	grid-area: title1;
 	background-color: #434a42;
+	color: #aca885;
+	text-align: center;
 }
 
 .background{
@@ -46,10 +53,11 @@ header{
 .image1{
 	grid-area: image1;
 }
-
 .title2{
 	grid-area: title2;
 	background-color: #434a42;
+	color: #aca885;
+	text-align: center;
 }
 
 .image2{
@@ -58,4 +66,10 @@ header{
 
 .how{
 	grid-area: how;
+}
+
+.fig{
+	font-family: Georgia;
+	font-style: italic;
+
 }
