@@ -70,3 +70,11 @@ function weightConverter(){
   }
   document.getElementById('Answer').innerHTML = showAnswer;
 }
+
+function massFluxConverter(){
+  var massFlux = document.getElementById('massflux').value;
+  var area = document.getElementById('Area').value;
+  var density = document.getElementById('density').value;
+  var denAnswer = (massFlux/(density*(1e+9/1000)))*1000*1000;
+  document.getElementById('denAnswer').innerHTML = denAnswer;
+}

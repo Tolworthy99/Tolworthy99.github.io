@@ -45,7 +45,13 @@
       <p id="Answer"></p>
 
       <!-- Conversion from Mass flux to denudation -->
-
-    </form>
+      <p>Mass Flux (t/km<sup>2</sup>/yr)</p>
+      <input type="number" id="massflux" placeholder="Mass Flux t/km2/yr">
+      <p>Area km<sup>2</sup></p>
+      <input type="number" id="Area" placeholder="Area km2">
+      <p>Density kg/m<sup>3</sup></p>
+      <input type="number" id="density" placeholder="Density kg/m3">
+      <input type="button" value="Convert to Denudation" onclick="massFluxConverter();">
+      <p id="denAnswer"></p><p>m/ka</p>
   </body>
 </html>
