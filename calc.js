@@ -1,11 +1,11 @@
 /* When the input field receives input, convert the value from feet to meters */
 function lengthConverter(valNum) {
-  document.getElementById("outputCm").innerHTML = valNum / 0.0022046;
+  document.getElementById("outputCm").innerHTML = valNum * 30.48;
   document.getElementById("outputKm").innerHTML = valNum / 3281;
   document.getElementById("outputInch").innerHTML = valNum * 12;
   document.getElementById("outputMeters").innerHTML = valNum / 3.2808;
-  document.getElementById("outputYard").innerHTML = valNum * 0.3333333;
-  document.getElementById("outputMile").innerHTML = valNum * 0.00018939;
+  document.getElementById("outputYard").innerHTML = valNum / 3;
+  document.getElementById("outputMile").innerHTML = valNum / 5280;
 }
 
 function weightConverter(){
@@ -76,5 +76,6 @@ function massFluxConverter(){
   var area = document.getElementById('Area').value;
   var density = document.getElementById('density').value;
   var denAnswer = (massFlux/(density*(1e+9/1000)))*1000*1000;
+  var denAnswer = denAnswer.toFixed(4);
   document.getElementById('denAnswer').innerHTML = denAnswer;
 }

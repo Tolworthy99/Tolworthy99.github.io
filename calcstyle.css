@@ -1,0 +1,36 @@
+body {
+  background-color: blue;
+}
+
+header{
+  text-align: center;
+  font-family: Georgia;
+  border-bottom: 2px solid black;
+  margin: 10px;
+}
+
+.feet{
+  width: 50%;
+  margin: auto;
+  height: auto;
+  padding: 10px;
+  border: 2px solid black;
+  overflow: auto;
+}
+
+.heightresults{
+  float: right;
+  padding: 30px;
+}
+
+.weight{
+  float: left;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.flux{
+  float: right;
+  border: 2px solid black;
+  padding: 10px;
+}

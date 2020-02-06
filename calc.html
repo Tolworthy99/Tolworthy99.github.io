@@ -5,22 +5,31 @@
     <title>Calculator</title>
     <link rel="stylesheet" type="text/css" href="calcstyle.css">
     <script type="text/javascript" src="calc.js"></script>
-
-    </script>
   </head>
   <body>
-    <!-- Conversion of Weight -->
+    <!-- Conversion of Height -->
+    <header>
+      <h1>Unit Conversions</h1>
+      <h5><em>By Joseph Tolworthy</em></h5>
+    </header>
+    <div class="feet">
+      <h2>Height Unit Converter</h2>
       <label>Enter feet</label>
-      <input id="inputFeet" type="number" placeholder="Length"
+      <input class="Height" id="inputFeet" type="number" placeholder="Length"
       oninput="lengthConverter(this.value)" onchange="lengthConverter(this.value)">
-      <p>cm: <span id="outputCm"></span></p>
-      <p>km: <span id="outputKm"></span></p>
-      <p>Inch: <span id="outputInch"></span></p>
-      <p>m: <span id="outputMeters"></span></p>
-      <p>Yard: <span id="outputYard"></span></p>
-      <p>Mile: <span id="outputMile"></span></p>
+      <div class="heightresults"
+        <p>cm: <span id="outputCm"></span></p>
+        <p>km: <span id="outputKm"></span></p>
+        <p>Inch: <span id="outputInch"></span></p>
+        <p>m: <span id="outputMeters"></span></p>
+        <p>Yard: <span id="outputYard"></span></p>
+        <p>Mile: <span id="outputMile"></span></p>
+      </div>
+    </div>
 
-      <!-- conversion of Height -->
+      <!-- conversion of weight -->
+    <div class="weight">
+      <h2>Weight Unit Converter</h2>
       <input type="number" id="numberwt" placeholder="weight">
       <section class="WeightUnitBefore">
         <label for="Weightunitbef">What unit?</label>
@@ -36,15 +45,18 @@
         <label for="Weightunit">What unit to convert to?</label>
         <select name="Weight" id="WeightUnitAfter" >
           <option value="outgrams">grams</option>
-          <option value="inkg" >kg</option>
+          <option value="outkg" >kg</option>
           <option value="outpounds">pounds</option>
           <option value="outounces">ounces</option>
         </select>
       </section>
       <input type="button" value="convert" onclick="weightConverter();">
       <p id="Answer"></p>
+    </div>
 
       <!-- Conversion from Mass flux to denudation -->
+    <div class="flux">
+      <h2>Mass Flux to Denudation</h2>
       <p>Mass Flux (t/km<sup>2</sup>/yr)</p>
       <input type="number" id="massflux" placeholder="Mass Flux t/km2/yr">
       <p>Area km<sup>2</sup></p>
@@ -53,5 +65,6 @@
       <input type="number" id="density" placeholder="Density kg/m3">
       <input type="button" value="Convert to Denudation" onclick="massFluxConverter();">
       <p id="denAnswer"></p><p>m/ka</p>
+    </div>
   </body>
 </html>
