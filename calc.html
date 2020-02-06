@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="calcstyle.css">
+    <script type="text/javascript" src="calc.js"></script>
+
+    </script>
+  </head>
+  <body>
+    <!-- Conversion of Weight -->
+      <label>Enter feet</label>
+      <input id="inputFeet" type="number" placeholder="Length"
+      oninput="lengthConverter(this.value)" onchange="lengthConverter(this.value)">
+      <p>cm: <span id="outputCm"></span></p>
+      <p>km: <span id="outputKm"></span></p>
+      <p>Inch: <span id="outputInch"></span></p>
+      <p>m: <span id="outputMeters"></span></p>
+      <p>Yard: <span id="outputYard"></span></p>
+      <p>Mile: <span id="outputMile"></span></p>
+
+      <!-- conversion of Height -->
+      <input type="number" id="numberwt" placeholder="weight">
+      <section class="WeightUnitBefore">
+        <label for="Weightunitbef">What unit?</label>
+        <select name="Weight" id="WeightUnitBef" >
+          <option value="ingrams">grams</option>
+          <option value="inkg" >kg</option>
+          <option value="inpounds">pounds</option>
+          <option value="inounces">ounces</option>
+        </select>
+      </section>
+      <br>
+      <section class="WeightUnitAfter">
+        <label for="Weightunit">What unit to convert to?</label>
+        <select name="Weight" id="WeightUnitAfter" >
+          <option value="outgrams">grams</option>
+          <option value="inkg" >kg</option>
+          <option value="outpounds">pounds</option>
+          <option value="outounces">ounces</option>
+        </select>
+      </section>
+      <input type="button" value="convert" onclick="weightConverter();">
+      <p id="Answer"></p>
+
+      <!-- Conversion from Mass flux to denudation -->
+
+    </form>
+  </body>
+</html>
