@@ -10,10 +10,10 @@
     <!-- Conversion of Height -->
     <header>
       <h1>Unit Conversions</h1>
-      <h5><em>By Joseph Tolworthy</em></h5>
+      <h5><em>Joseph Tolworthy</em></h5>
     </header>
     <div class="feet">
-      <h2>Height Unit Converter</h2>
+      <h2>Length Unit Converter</h2>
       <label>Enter feet</label>
       <input class="Height" id="inputFeet" type="number" placeholder="Length"
       oninput="lengthConverter(this.value)" onchange="lengthConverter(this.value)">
@@ -33,6 +33,7 @@
       <input type="number" id="numberwt" placeholder="weight">
       <section class="WeightUnitBefore">
         <label for="Weightunitbef">What unit?</label>
+        <br>
         <select name="Weight" id="WeightUnitBef" >
           <option value="ingrams">grams</option>
           <option value="inkg" >kg</option>
@@ -43,6 +44,7 @@
       <br>
       <section class="WeightUnitAfter">
         <label for="Weightunit">What unit to convert to?</label>
+        <br>
         <select name="Weight" id="WeightUnitAfter" >
           <option value="outgrams">grams</option>
           <option value="outkg" >kg</option>
@@ -50,7 +52,7 @@
           <option value="outounces">ounces</option>
         </select>
       </section>
-      <input type="button" value="convert" onclick="weightConverter();">
+      <input type="button" id="conbutton" value="convert" onclick="weightConverter();">
       <p id="Answer"></p>
     </div>
 
@@ -63,8 +65,9 @@
       <input type="number" id="Area" placeholder="Area km2">
       <p>Density kg/m<sup>3</sup></p>
       <input type="number" id="density" placeholder="Density kg/m3">
-      <input type="button" value="Convert to Denudation" onclick="massFluxConverter();">
-      <p id="denAnswer"></p><p>m/ka</p>
+      <br>
+      <input type="button" value="Convert to Denudation" onclick="massFluxConverter();" id="denbutton">
+      <p id="denAnswer"></p>
     </div>
   </body>
 </html>

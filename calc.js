@@ -76,6 +76,6 @@ function massFluxConverter(){
   var area = document.getElementById('Area').value;
   var density = document.getElementById('density').value;
   var denAnswer = (massFlux/(density*(1e+9/1000)))*1000*1000;
-  var denAnswer = denAnswer.toFixed(4);
+  var denAnswer = denAnswer.toFixed(4) + ' m/ka';
   document.getElementById('denAnswer').innerHTML = denAnswer;
 }
