@@ -1,0 +1,44 @@
+body {
+  background-color: #2c2b30;
+  color: #D6d6d6;
+  font-family: Georgia;
+}
+
+header{
+  background-color: #4f4f51;
+  padding: 10px;
+  text-align: center;
+  border-bottom: solid 5px #f58f7c;
+
+}
+
+.intro{
+  background-color: #4f4f51;
+  float: left;
+  padding-right: 10px;
+  border-right: 3px solid #f58f7c;
+}
+
+.calc{
+  background-color: #4f4f51;
+  padding: 10px;
+  text-align: center;
+}
+
+.intro h4, p {
+  text-align: center;
+}
+
+.units {
+  margin-bottom: 10px;
+}
+
+.intext{
+  background-color: #f2c4fc;
+}
+
+#button {
+  padding: 5px;
+  margin-top: 10px;
+  border: solid 1px #f58f7c;
+}

@@ -5,23 +5,19 @@ function manning(){
   var answer;
   var si = document.getElementById("si");
   var english = document.getElementById("english");
-  var warning;
 
   if (si.checked == true){
-  answer = (1 / n) * (rh ** (2/3)) * (s ** (1/2));
+  answer = 'Computed flow velocity, v, is ' + (1 / n) * (rh ** (2/3)) * (s ** (1/2)) + ' m/s';
   } else if (english.checked == true){
-  answer = (1.486 / n) * (rh ** (2/3)) * (s ** (1/2));
-  } else{
+  answer = 'Computed flow velocity, v, is ' + (1.486 / n) * (rh ** (2/3)) * (s ** (1/2)) + ' ft/s';
+  } else {
   answer = "no chosen units!"
   }
 
-  if (answer < 0){
-    warning = "ANSWER IS NEGATIVE";
-  } else{
-    wanrning = ""
-  }
+  if (n < 0.01 || n > 0.06 || s < 0 || rh < 0){
+  alert ("Check Input Values")
+}
+  else{}
 
-
-  document.getElementById("answer").innerHTML = answer;
-  document.getElementById("warning").innerHTML = warning;
+   document.getElementById("answer").innerHTML = answer;
 }

@@ -2,31 +2,44 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="manning.css">
     <script type="text/javascript" src="manning.js"></script>
     <title>Assigment 6</title>
   </head>
   <body>
-    <h1>Manning's Equation Calculator</h1>
-    <p>v = (k<sub>n</sub>/n) R<sub>h</sub><sup>2/3</sup> S<sup>1/2</sup></p>
-    <ul>
-      <li>v = cross-sectional mean velocity (ft/s, m/s)</li>
-      <li>k<sub>n</sub> = 1.486 for English units and k<sub>n</sub> = 1.0 for SI units</li>
-      <li>n = Manning coefficient of roughness</li>
-      <li>R<sub>h</sub> = hydraulic radius (ft, m)</li>
-      <li>S = slope or gradient of pipe (ft/ft, m/m)</li>
-    </ul>
-    <input type="number" id="n" value="n" placeholder="n">
-    <input type="number" id="rh" value="rh" placeholder="rh">
-    <input type="number" id="s" value="s" placeholder="s">
-    <br>
-    <input type="radio" name="units" value="SI" id="si">
-    <label for="si">SI</label>
-    <br>
-    <input type="radio" name="units" value="English" id="english">
-    <label for="english">english</label>
-    <br>
-    <button id="button" onclick="manning();">Calculate</button>
-    <p id="answer"></p>
-    <p id="warning"></p>
+    <header>
+      <h1>Manning's Equation Calculator</h1>
+      <h3>Assigment 6</h3>
+      <h3>12<sup>th</sup> February 2019</h3>
+      <h3>Joseph Tolworthy</h3>
+    </header>
+   <article class = "intro">
+      <h4>Manning's Equation</h4>
+      <p>v = (k<sub>n</sub>/n) R<sub>h</sub><sup>2/3</sup> S<sup>1/2</sup></p>
+      <ul>
+        <li>v = cross-sectional mean velocity (ft/s, m/s)</li>
+        <li>k<sub>n</sub> = 1.486 for English units and k<sub>n</sub> = 1.0 for SI units</li>
+        <li>n = Manning coefficient of roughness</li>
+        <li>R<sub>h</sub> = hydraulic radius (ft, m)</li>
+        <li>S = slope or gradient of pipe (ft/ft, m/m)</li>
+      </ul>
+    </article>
+    <div class= "calc">
+      <label>Units: </label>
+      <input type="radio" name="units" value="SI" id="si" class="units">
+      <label for="si">SI</label>
+      <input type="radio" name="units" value="English" id="english" class="units">
+      <label for="english">english</label>
+      <br>
+      <label for="n">n: </label>
+      <input type="number" id="n" value="n" placeholder="n" class="intext">
+      <label for="rh">R<sub>h</sub>: </label>
+      <input type="number" id="rh" value="rh" placeholder="rh" class="intext">
+      <label for="s">s: </label>
+      <input type="number" id="s" value="s" placeholder="s" class="intext">
+      <br>
+      <button id="button" onclick="manning();">Calculate</button>
+      <p id="answer"></p>
+    </div>
   </body>
 </html>
