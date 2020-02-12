@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="manning.js"></script>
+    <title>Assigment 6</title>
+  </head>
+  <body>
+    <h1>Manning's Equation Calculator</h1>
+    <p>v = (k<sub>n</sub>/n) R<sub>h</sub><sup>2/3</sup> S<sup>1/2</sup></p>
+    <ul>
+      <li>v = cross-sectional mean velocity (ft/s, m/s)</li>
+      <li>k<sub>n</sub> = 1.486 for English units and k<sub>n</sub> = 1.0 for SI units</li>
+      <li>n = Manning coefficient of roughness</li>
+      <li>R<sub>h</sub> = hydraulic radius (ft, m)</li>
+      <li>S = slope or gradient of pipe (ft/ft, m/m)</li>
+    </ul>
+    <input type="number" id="n" value="n" placeholder="n">
+    <input type="number" id="rh" value="rh" placeholder="rh">
+    <input type="number" id="s" value="s" placeholder="s">
+    <br>
+    <input type="radio" name="units" value="SI" id="si">
+    <label for="si">SI</label>
+    <br>
+    <input type="radio" name="units" value="English" id="english">
+    <label for="english">english</label>
+    <br>
+    <button id="button" onclick="manning();">Calculate</button>
+    <p id="answer"></p>
+    <p id="warning"></p>
+  </body>
+</html>
