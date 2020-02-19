@@ -10,17 +10,28 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(mymap);
 
 var markerimg = '<img src=Images/IMG_0689.jpeg height="100px" width="100px">'
+var customPopupHome = "<b>Old Home</b><br>" + markerimg ;
+var customPopupCollege = "<b>Bede Sixth Form College (Community College)</b><br><ul><li>Graduated 2010</li><li>3 A-Levels</li><ul><li>Chemistry</li><li>Geology</li><li>Math</li></ul></ul>";
+var customPopupSchool = "<b>St Michaels RC Secondary School (Secondary School)</b><br><ul><li>Graduated 2008</li><li>13 G.S.C.E's</li></ul>"
+var customPopupChurch = "<b>Church of Jesus Christ of Latter-day Saints</b><br><p>It is the stake center and had the family history center</p>"
+
+ // specify popup options
+ var customOptions =
+     {
+     'maxWidth': '500',
+     'className' : 'custom'
+     }
 var marker = L.marker([54.624918, -1.279280]).addTo(mymap);
-marker.bindPopup("<b>Old Home</b><br>" + markerimg);
+marker.bindPopup(customPopupHome, customOptions);
 
 var marker = L.marker([54.617078, -1.282447]).addTo(mymap);
-marker.bindPopup("<b>Bede Sixth Form College (Community College)</b><br><ul><li>Graduated 2010</li><li>3 A-Levels</li><ul><li>Chemistry</li><li>Geology</li><li>Math</li></ul></ul>");
+marker.bindPopup(customPopupCollege, customOptions);
 
 var marker = L.marker([54.614176, -1.271438]).addTo(mymap);
-marker.bindPopup("<b>St Michaels RC Secondary School (Secondary School)</b><br><ul><li>Graduated 2008</li><li>13 G.S.C.E's</li></ul>");
+marker.bindPopup(customPopupSchool, customOptions);
 
 var marker = L.marker([54.607679, -1.281147]).addTo(mymap);
-marker.bindPopup("<b>Church of Jesus Christ of Latter-day Saints</b><br><p>It is the stake center and had the family history center</p>");
+marker.bindPopup(customPopupChurch, customOptions);
 
 var polygon = L.polygon([
     [54.625060, -1.279191],
@@ -35,6 +46,8 @@ var circle = L.circle([54.624918, -1.279280], {
     fillOpacity: 0.5,
     radius: 550
 }).addTo(mymap);
+
+
 
 //The Journey of Life
 //The Journey of Life
@@ -63,35 +76,35 @@ var Not = [52.952554, -1.157361],
 
 
 var route = L.featureGroup([
-	L.marker(Not),
+	L.marker(Not) .bindPopup("Nottingham"),
 	L.polyline([Not, Tin]),
-	L.marker(Tin),
+	L.marker(Tin) .bindPopup("Tintagel"),
 	L.polyline([Tin, Cam]),
-	L.marker(Cam),
+	L.marker(Cam) .bindPopup("Camelford"),
 	L.polyline([Cam, Lau]),
-  L.marker(Lau),
+  L.marker(Lau) .bindPopup("Launceston"),
 	L.polyline([Lau, Bil1]),
-	L.marker(Bil1),
+	L.marker(Bil1) .bindPopup("Billingham"),
 	L.polyline([Bil1, Pro]),
-	L.marker(Pro),
+	L.marker(Pro) .bindPopup("Provo"),
 	L.polyline([Pro, Hol]),
-	L.marker(Hol),
+	L.marker(Hol) .bindPopup("Holladay"),
 	L.polyline([Hol, Ave]),
-  L.marker(Ave),
+  L.marker(Ave) .bindPopup("The Avenues"),
   L.polyline([Ave, Ros]),
   L.marker(Ros) .bindPopup("Rock Springs"),
   L.polyline([Ros, Far]),
-  L.marker(Far),
+  L.marker(Far) .bindPopup("Farmington/Centerville"),
   L.polyline([Far, Too]),
-  L.marker(Too),
+  L.marker(Too) .bindPopup("Tooele"),
   L.polyline([Too, Ssl]),
-  L.marker(Ssl),
+  L.marker(Ssl) .bindPopup("South Salt Lake"),
   L.polyline([Ssl, Bil1]),
-  L.marker(Bil1),
+  L.marker(Bil1) .bindPopup("Billingham House 1"),
   L.polyline([Bil1, Bil2]),
-  L.marker(Bil2),
+  L.marker(Bil2) .bindPopup("Billingham House 2"),
   L.polyline([Bil2, Pro], {color:"red",}),
-  L.marker(Pro)
+  L.marker(Pro) .bindPopup("Provo")
 ]);
 
 //lifeMap.addLayer(route);
