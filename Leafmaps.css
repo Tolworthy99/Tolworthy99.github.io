@@ -28,7 +28,9 @@ body{
     font-size: 15px;
 }
 
-
+#credit{
+  text-align: left;
+}
 #mapid {
  margin: auto;
  height: 400px;
