@@ -51,11 +51,12 @@ var circle = L.circle([54.624918, -1.279280], {
 
 //The Journey of Life
 //The Journey of Life
-var lifeMap = L.map('lifemap').setView([40.68510, -73.94136], 1);
+var lifeMap = L.map('lifemap');
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
+    minZoom:4,
     id: 'mapbox/streets-v11',
     accessToken: 'pk.eyJ1IjoidG9sd29ydGh5MSIsImEiOiJjazZsYmV5a2gwZDlzM2xueTRiOHNscGoxIn0.aJB5chRIixiPuc-kkmaP7g'
 }).addTo(lifeMap);
