@@ -9,8 +9,8 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoidG9sd29ydGh5MSIsImEiOiJjazZsYmV5a2gwZDlzM2xueTRiOHNscGoxIn0.aJB5chRIixiPuc-kkmaP7g'
 }).addTo(mymap);
 
-var markerimg = '<img src=Images/IMG_0689.jpeg height="100px" width="100px">'
-var customPopupHome = "<b>Old Home</b><br>" + markerimg ;
+var markerimg = '<img src=Images/IMG_0689.jpeg height="100px">'
+var customPopupHome = "<b>Old Home</b><br>" + markerimg + "<p>This was my home for most of my time in Billingham.</p>";
 var customPopupCollege = "<b>Bede Sixth Form College (Community College)</b><br><ul><li>Graduated 2010</li><li>3 A-Levels</li><ul><li>Chemistry</li><li>Geology</li><li>Math</li></ul></ul>";
 var customPopupSchool = "<b>St Michaels RC Secondary School (Secondary School)</b><br><ul><li>Graduated 2008</li><li>13 G.S.C.E's</li></ul>"
 var customPopupChurch = "<b>Church of Jesus Christ of Latter-day Saints</b><br><p>It is the stake center and had the family history center</p>"
