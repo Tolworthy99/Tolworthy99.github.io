@@ -8,11 +8,27 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoidG9sd29ydGh5MSIsImEiOiJjazZsYmV5a2gwZDlzM2xueTRiOHNscGoxIn0.aJB5chRIixiPuc-kkmaP7g'
 }).addTo(mymap);
 
-let Countries = L.tileLayer.wms('https://geoserver.hydroshare.org/geoserver/HS-6714073776aa4de3b47a6d09084c3dd3/wms',{
+var shapefiles = {
+  'Countries I have been to': L.tileLayer.wms('https://geoserver.hydroshare.org/geoserver/HS-6714073776aa4de3b47a6d09084c3dd3/wms',{
   layers: 'CEEN514_Assignment_8 Countries_Visited',
   format: 'image/png',
   transparent: true,
-}).addTo(mymap);
+}),
+
+  'Cities that would be cool to visit': L.tileLayer.wms('https://geoserver.hydroshare.org/geoserver/HS-6714073776aa4de3b47a6d09084c3dd3/wms',{
+  layers: 'CEEN514_Assignment_8 Cities_to_visit',
+  format: 'image/png',
+  transparent: true,
+}),
+
+  'Both Layers': L.tileLayer.wms('https://geoserver.hydroshare.org/geoserver/HS-6714073776aa4de3b47a6d09084c3dd3/wms',{
+  layers: 'CEEN514_Assignment_8 Countries_Visited,CEEN514_Assignment_8 Cities_to_visit',
+  format: 'image/png',
+  transparent: true,
+})
+}
+
+L.control.layers(shapefiles).addTo(mymap);
 
 var Bound1 = [47.583393, 19.394759],
     Bound2 = [22.176344, -160.875554];

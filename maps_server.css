@@ -1,3 +1,13 @@
+body{
+  font-family: Yatra One;
+  text-align: center;
+  background-image: url("Images/Bay.jpeg");
+  background-size: cover;
+}
+
+h6{
+  font-size: 20px;
+}
 #mapid {
  margin: auto;
  height: 400px;
