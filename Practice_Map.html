@@ -19,7 +19,7 @@
      }
      #mapid {
       margin: auto;
-      height: 400px;
+      height: 600px;
       width: 1000px;
      }
    </style>
@@ -30,12 +30,17 @@
 
     <div>
     <div id="mapid"></div>
+    <div class="Sources">
+      <h4>Sources for Data</h4>
+      <p>Giambelluca, T.W., Q. Chen, A.G. Frazier, J.P. Price, Y.-L. Chen, P.-S. Chu, J.K. Eischeid, and D.M. Delparte, 2013: Online Rainfall Atlas of Hawai‘i. Bull. Amer. Meteor. Soc. 94, 313-316, doi: 10.1175/BAMS-D-11-00228.1.</p>
+      <p>Giambelluca, T.W., X. Shuai, M.L. Barnes, R.J. Alliss, R.J. Longman, T. Miura, Q. Chen, A.G. Frazier, R.G. Mudd, L. Cuo, and A.D. Businger. 2014. Evapotranspiration of Hawai‘i. Final report submitted to the U.S. Army Corps of Engineers—Honolulu District, and the Commission on Water Resource Management, State of Hawai‘i.</p>
+    </div>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
     crossorigin=""></script>
     <script>
       //Map of different parts of my home time
-      var mymap = L.map('mapid').setView([22.063177, -159.501938], 10);
+      var mymap = L.map('mapid').setView([22.063177, -159.501938], 11);
 
       L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
           attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -45,20 +50,26 @@
       }).addTo(mymap);
 
       var shapefiles = {
-        'Countries I have been to': L.tileLayer.wms('https://geoserver.hydroshare.org/geoserver/HS-6714073776aa4de3b47a6d09084c3dd3/wms',{
-        layers: 'CEEN514_Assignment_8 Countries_Visited',
+        'Kauai DEM': L.tileLayer.wms('https://geoserver.hydroshare.org/geoserver/HS-bc69c70dc6ec4b668efbebcf0c763d30/wms',{
+        layers: 'Kauai kauai_dem_Clip',
         format: 'image/png',
         transparent: true,
       }),
 
-        'Cities that would be cool to visit': L.tileLayer.wms('https://geoserver.hydroshare.org/geoserver/HS-6714073776aa4de3b47a6d09084c3dd3/wms',{
-        layers: 'CEEN514_Assignment_8 Cities_to_visit',
+        'Watershed Boundaries': L.tileLayer.wms('https://geoserver.hydroshare.org/geoserver/HS-c494b4543c6f4b7fbd42c7e79467fcd5/wms',{
+        layers: 'WaimeaWatershed',
+        format: 'image/png',
+        transparent: true,
+      }),
+
+        'Geology': L.tileLayer.wms('https://geoserver.hydroshare.org/geoserver/HS-bc69c70dc6ec4b668efbebcf0c763d30/wms',{
+        layers: 'Kauai Geology',
         format: 'image/png',
         transparent: true,
       }),
 
         'Both Layers': L.tileLayer.wms('https://geoserver.hydroshare.org/geoserver/HS-6714073776aa4de3b47a6d09084c3dd3/wms',{
-        layers: 'CEEN514_Assignment_8 Countries_Visited,CEEN514_Assignment_8 Cities_to_visit',
+        layers: 'Kauai kauai_dem_Clip,CEEN514_Assignment_8 Cities_to_visit',
         format: 'image/png',
         transparent: true,
       })
@@ -66,10 +77,7 @@
 
       L.control.layers(shapefiles).addTo(mymap);
 
-      var Bound1 = [47.583393, 19.394759],
-          Bound2 = [22.176344, -160.875554];
 
-      mymap.fitBounds([Bound1,Bound2]);
     </script>
   </body>
 </html>
