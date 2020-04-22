@@ -77,6 +77,7 @@
     </div>
     <script type="text/javascript" src="geolmap.js"></script>
     <script type="text/javascript" src="us-states.js"></script>
+    <script type="text/javascript" src="leaflet_plugin.js"></script>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
     crossorigin=""></script>
@@ -102,9 +103,14 @@
         layers: 'WaimeaWatershed',
         format: 'image/png',
         transparent: true,
+      }),
+
+        'Isohyets': L.tileLayer.wms('https://geoserver.hydroshare.org/geoserver/HS-c494b4543c6f4b7fbd42c7e79467fcd5/wms',{
+        layers: 'isohyet_mm_Ann_kauai',
+        format: 'image/png',
+        transparent: true,
       })
       }
-
 
       L.control.layers(shapefiles).addTo(mymap);
 
